@@ -40,3 +40,15 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.querySelector("p").style.display = "block";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.querySelector("p").style.display = "none";
+  });
+});
