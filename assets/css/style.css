@@ -134,7 +134,7 @@
   width: auto;
   height: 603px;
 }
-.percentages {
+.skills {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -142,16 +142,108 @@
   margin-left: 68px;
   margin-right: 364px;
 }
-.skills p {
-  display: flex;
-  max-width: 302px;
-  width: auto;
-  padding: 10px;
-  color: #555555;
+
+.skill {
+  margin-bottom: 20px;
 }
-.skills span {
-  padding-left: 10px;
+
+.skill-name {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+.skill-name span {
   color: #e93656;
-  /* overflow: hidden; */
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
   opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+.skill-name span.show {
+  opacity: 1;
+}
+.skill-bar {
+  height: 9px;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.skill-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #e93656;
+  width: 0;
+  transition: width 1s ease;
+}
+.socialset a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialset a:hover {
+  transform: scale(1.5);
+}
+
+.contact {
+  background-color: #131a36;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .phone,
+.contact .address,
+.contact .email {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.contact .phone img,
+.contact .address img,
+.contact .email img {
+  width: 30px;
+  height: 30px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  border-radius: 50%;
+}
+
+.contact h3 {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.contact p,
+a {
+  color: #dfdfdf;
+  font-size: 14px;
+  font-weight: bold;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.contact .address img {
+  margin: 40px;
+  border-radius: 50%;
+  border: 2px;
+  /* padding: 30px; */
+  background-color: #e93656;
+}
+.contact .phone img,
+.contact .email img {
+  margin: 40px;
+  border-radius: 50%;
+  border: 2px dashed #ffffff;
+  /* padding: 30px; */
 }
