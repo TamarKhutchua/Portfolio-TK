@@ -243,8 +243,8 @@ a {
 .contact .phone img,
 .contact .email img {
   margin: 40px;
-  border-radius: 50%;
   border: 2px dashed #ffffff;
+  border-radius: 50%;
   /* padding: 30px; */
 }
 
@@ -268,7 +268,6 @@ a {
   height: 360px;
   padding: 20px;
   background-color: #fafafa;
-  /* overflow: hidden; */
 }
 
 .offer .card img {
@@ -290,78 +289,100 @@ a {
   font-size: 14px;
   text-align: justify;
   color: #222222;
-  /* opacity: 0;
-  transition: opacity 1s ease-in-out; */
 }
 
-/* .offer .card p.show {
-  opacity: 1;
-} */
-/* .offer .card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.offerbottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("../icons/clip.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
 }
 
-.offer .card:hover::before {
-  opacity: 1;
-} */
-
-/* .offer .card::after {
-  content: attr(alt);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.offerqoute {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 50%;
 }
 
-.offer .card:hover::after {
-  opacity: 1;
-} */
-
-/* .offer {
-  margin-top: 203px;
-  display: grid;
-  grid-template-columns: 3;
-  grid-template-rows: 2;
-}
-.offer .card {
-  display: grid;
-  grid-template-columns: 3;
-  grid-template-rows: 2;
-  max-width: 285px;
-  width: 100%;
-  height: 360px;
-  gap: 10px;
-  background-color: #fafafa;
-  opacity: 0.97;
-  /* overflow: hidden; */
-
-/* .offer .card::after {
-  content: attr(alt);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
-.offer .card:hover::after {
-  opacity: 1;
-} */
+.txt p {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: light;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.txt img {
+  width: 140px;
+  max-width: 100%;
+  height: 140px;
+  padding: 15px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.quote img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.quote h3 {
+  color: #e93656;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.quote p {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.rect {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+.rectangle {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #ffffff;
+  margin: 0 10px;
+  transition: background-color 1s ease;
+}
+.rectangle:hover {
+  border-color: #e93656;
+}
