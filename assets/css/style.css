@@ -290,99 +290,110 @@ a {
   text-align: justify;
   color: #222222;
 }
-
-.offerbottom {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+.recommendations {
   background-image: url("../icons/clip.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  padding: 50px;
-}
-
-.offerqoute {
+  width: 100%;
+  height: 300px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.recomendators {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
   flex-basis: 50%;
 }
-
-.txt {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 50px;
+.quote {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  /* visibility: hidden;
+  transition: all 0.5s; */
+  top: 0;
+  left: -100%;
 }
-
-.txt p {
+.active {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  left: 0;
+}
+.quote-txt {
   color: #ffffff;
   font-size: 15px;
-  font-weight: light;
+  font-weight: lighter;
   text-align: right;
-  margin-bottom: 30px;
+  inline-size: 300px;
 }
 
-.txt img {
-  width: 140px;
-  max-width: 100%;
-  height: 140px;
-  padding: 15px;
-  border: 2px dashed #ffffff;
-  border-radius: 50%;
-}
-
-.quote {
+.quote-author {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
 }
-
-.quote img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+.quote-author img {
+  width: 39px;
+  height: 26px;
+  margin-bottom: 38px;
 }
-
-.quote h3 {
+.quote-p {
   color: #e93656;
   font-size: 13px;
-  margin-bottom: 10px;
 }
-
-.quote p {
+.quote-title {
   color: #ffffff;
   font-size: 28px;
-  margin-bottom: 0;
+  font-weight: bold;
+}
+.qimage {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed white;
+  border-radius: 50%;
+  position: relative;
+}
+.qimage img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .rect {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 50%;
+  align-items: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .rectangle {
+  display: flex;
+  flex-wrap: wrap;
   width: 13px;
   height: 13px;
   border: 2px solid #ffffff;
   margin: 0 10px;
-  transition: background-color 1s ease;
 }
-.rectangle:hover {
-  border-color: #e93656;
+.rectangle.active {
+  border: 2px solid #e93656;
 }

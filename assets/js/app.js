@@ -52,3 +52,21 @@ cards.forEach((card) => {
     card.querySelector("p").style.display = "none";
   });
 });
+
+const slides = document.querySelectorAll(".quote");
+const buttons = document.querySelectorAll(".rectangle");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const slideNumber = button.getAttribute("data-slide");
+
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+
+    const slideToShow = document.querySelector(
+      `.quote[data-slide="${slideNumber}"]`
+    );
+    slideToShow.classList.add("active");
+  });
+});
