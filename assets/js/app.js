@@ -70,3 +70,27 @@ buttons.forEach((button) => {
     slideToShow.classList.add("active");
   });
 });
+
+const listItems = document.querySelectorAll(".list-item");
+const projectItems = document.querySelectorAll(".project");
+
+listItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    listItems.forEach((listItem) => {
+      listItem.classList.remove("active");
+    });
+    item.classList.add("active");
+
+    const category = item.innerText;
+
+    projectItems.forEach((project, projectIndex) => {
+      if (category === "All") {
+        project.style.display = "block";
+      } else if (projectIndex === index - 1) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    });
+  });
+});
