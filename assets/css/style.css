@@ -594,14 +594,20 @@ a {
   justify-content: flex-start;
   align-items: center;
   text-align: left;
+  max-width: 1200px;
   width: 100%;
   padding: 20px;
   white-space: nowrap;
 }
+
 .timeline-item:nth-child(even) {
   flex-direction: row-reverse;
 }
-
+/* .timeline-item > div {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+} */
 .timeline-year {
   font-weight: bold;
   font-size: 30px;
@@ -679,4 +685,60 @@ a {
   width: 60%;
   padding: 170px 50px;
   background-color: #e1e0dc;
+}
+
+/* .team {
+  display: inline-block;
+  justify-content: space-around;
+  max-width: 1170px;
+  width: 100%;
+} */
+.team h6 {
+  color: #2ed279;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 169px;
+}
+.team h3 {
+  color: #2e2e2e;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+}
+.team .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 44px;
+  max-width: 1170px;
+  width: 100%;
+  margin: 81px;
+}
+
+.team-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 44px 33px;
+  border: 4px solid #e93656;
+  position: relative;
+}
+
+.team-details h6 {
+  color: #161616;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 44px;
+}
+.team-details p {
+  color: #626262;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 44px;
 }

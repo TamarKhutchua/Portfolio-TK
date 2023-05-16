@@ -94,3 +94,19 @@ listItems.forEach((item, index) => {
     });
   });
 });
+
+// // Get all the team-details elements
+// var teamDetails = document.getElementsByClassName("team-details");
+
+// // Add event listeners to each team-details element
+// Array.from(teamDetails).forEach(function (element) {
+//   element.addEventListener("mouseover", function () {
+//     // Show the content when mouse approaches the element
+//     this.querySelector(".content").style.display = "block";
+//   });
+
+//   element.addEventListener("mouseout", function () {
+//     // Hide the content when mouse leaves the element
+//     this.querySelector(".content").style.display = "none";
+//   });
+// });
