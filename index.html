@@ -392,6 +392,63 @@
         </div>
       </div>
     </section>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <form
+        action="https://borjomi.loremipsum.ge/api/send-message"
+        method="post"
+      >
+        <div class="form">
+          <div class="form-group1">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name*"
+              required
+            />
+          </div>
+          <div class="form-group2">
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Email Address*"
+            />
+          </div>
+          <div class="form-group3">
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="Your Website*"
+            />
+          </div>
+          <div class="form-group4">
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Message*"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group5">
+            <button type="submit">SEND MESSAGE</button>
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <span class="close">X</span>
+                <p id="modal-message">
+                  Thank you for getting in touch! We appreciate you contacting
+                  us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
 
     <script src="assets/js/app.js"></script>
   </body>

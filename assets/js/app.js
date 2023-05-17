@@ -110,3 +110,63 @@ listItems.forEach((item, index) => {
 //     this.querySelector(".content").style.display = "none";
 //   });
 // });
+
+function sendMessage() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const website = document.getElementById("website").value;
+  const message = document.getElementById("message").value;
+
+  const formData = {
+    name: name,
+    email: email,
+    website: website,
+    message: message,
+  };
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "your_api_endpoint_here");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        let response = JSON.parse(xhr.responseText);
+        if (response.status === 1) {
+          showModal(
+            "Thank you for getting in touch! We appreciate you contacting us."
+          );
+        }
+      }
+    }
+  };
+  xhr.send(JSON.stringify(formData));
+}
+
+// Function to show the modal with a given message
+function showModal(message) {
+  var modal = document.getElementById("modal");
+  var modalMessage = document.getElementById("modal-message");
+  var closeBtn = document.getElementsByClassName("close")[0];
+
+  modal.style.display = "block";
+  modalMessage.innerText = message;
+
+  // Close the modal when the close button is clicked
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Close the modal when the user clicks outside the modal
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+// Add event listener to the send button
+var sendButton = document.getElementById("send-button");
+sendButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  sendMessage();
+});
