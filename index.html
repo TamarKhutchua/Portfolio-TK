@@ -420,6 +420,7 @@
       <h2>Contact Us</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
       <form
+        id="myForm"
         action="https://borjomi.loremipsum.ge/api/send-message"
         method="post"
       >
@@ -460,18 +461,18 @@
           </div>
           <div class="form-group5">
             <button type="submit">SEND MESSAGE</button>
-            <div id="modal" class="modal">
-              <div class="modal-content">
-                <span class="close">X</span>
-                <p id="modal-message">
-                  Thank you for getting in touch! We appreciate you contacting
-                  us.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </form>
+      <div id="feedbackMessage"></div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            Thank you for getting in touch! We appreciate you contacting us.
+          </p>
+        </div>
+      </div>
     </section>
     <footer>
       <div class="footer-content">
