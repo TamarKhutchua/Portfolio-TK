@@ -95,21 +95,15 @@ listItems.forEach((item, index) => {
   });
 });
 
-// // Get all the team-details elements
-// var teamDetails = document.getElementsByClassName("team-details");
+const logoContainer = document.querySelector(".logo-container");
 
-// // Add event listeners to each team-details element
-// Array.from(teamDetails).forEach(function (element) {
-//   element.addEventListener("mouseover", function () {
-//     // Show the content when mouse approaches the element
-//     this.querySelector(".content").style.display = "block";
-//   });
+logoContainer.addEventListener("mouseenter", () => {
+  logoContainer.classList.add("active");
+});
 
-//   element.addEventListener("mouseout", function () {
-//     // Hide the content when mouse leaves the element
-//     this.querySelector(".content").style.display = "none";
-//   });
-// });
+logoContainer.addEventListener("mouseleave", () => {
+  logoContainer.classList.remove("active");
+});
 
 function sendMessage() {
   const name = document.getElementById("name").value;
