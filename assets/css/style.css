@@ -3,8 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* slide section */
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
   max-width: 1920px;
@@ -91,6 +94,8 @@
   margin-top: 26px;
   border-radius: 5px;
 }
+
+/* profile section */
 .profile {
   display: flex;
   justify-content: space-around;
@@ -188,6 +193,7 @@
   transform: scale(1.5);
 }
 
+/* contact section */
 .contact {
   background-color: #131a36;
   padding: 60px 0;
@@ -246,6 +252,7 @@ a {
   border-radius: 50%;
 }
 
+/* service section */
 .offer {
   display: flex;
   flex-wrap: wrap;
@@ -288,6 +295,8 @@ a {
   text-align: justify;
   color: #222222;
 }
+
+/* recommendations section */
 .recommendations {
   background-image: url("../icons/clip.jpg");
   background-size: cover;
@@ -394,6 +403,7 @@ a {
   color: #e93656;
 }
 
+/* Projects section */
 .projects {
   max-width: 1420px;
   width: 100%;
@@ -529,6 +539,8 @@ a {
   bottom: 0;
   width: 3px;
 }
+
+/* articles section */
 .articles {
   display: inline-block;
   max-width: 1750px;
@@ -632,10 +644,13 @@ a {
   background-color: #e1e0dc;
 }
 
+/* Rosa team section */
 .team h6 {
   color: #2ed279;
   font-size: 14px;
   font-weight: bold;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 169px;
 }
@@ -644,6 +659,8 @@ a {
   font-size: 70px;
   font-weight: bold;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .team .details {
@@ -659,7 +676,11 @@ a {
 }
 
 .logo-container {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   position: relative;
 }
 
